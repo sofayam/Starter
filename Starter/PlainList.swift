@@ -10,6 +10,12 @@ import UIKit
 
 class PlainList: UITableViewController {
     
+    func setData( xitems: [String]) {
+        items = xitems
+    }
+    
+    var items = ["a","b", "c"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "my Plain old view"
@@ -22,11 +28,11 @@ class PlainList: UITableViewController {
     }
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         var cell = tableView.dequeueReusableCellWithIdentifier("cellplain", forIndexPath: indexPath) as UITableViewCell
-        cell.textLabel.text = "Cell number \(indexPath.row)"
+        cell.textLabel.text = "Cell for entry: \(items[indexPath.row])"
         return cell
     }
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 11
+        return items.count
     }
     
 

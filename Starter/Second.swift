@@ -31,6 +31,7 @@ class Second: UIViewController {
     
     @IBAction func plainPressed(sender: AnyObject) {
         let plainList = self.storyboard.instantiateViewControllerWithIdentifier("plain") as PlainList
+        plainList.setData(["foo","bar","baz"])
         self.navigationController.pushViewController(plainList, animated: true)
     }
 
