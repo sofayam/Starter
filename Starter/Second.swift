@@ -18,6 +18,20 @@ class Second: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
+    
+    
+    @IBAction func pressedIt(sender: AnyObject) {
+        let sneakyList = self.storyboard.instantiateViewControllerWithIdentifier("sneaky") as SneakyList
+        self.navigationController.pushViewController(sneakyList, animated: true)
+        
+    }
+
+    
+    @IBAction func plainPressed(sender: AnyObject) {
+        let plainList = self.storyboard.instantiateViewControllerWithIdentifier("plain") as PlainList
+        self.navigationController.pushViewController(plainList, animated: true)
+    }
 
 }
