@@ -9,7 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var x = 0
                             
+    @IBAction func pressShow(sender: AnyObject) {
+        
+        let viewThere = self.storyboard.instantiateViewControllerWithIdentifier("second") as Second
+        self.navigationController.pushViewController(viewThere, animated: true)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +28,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func pressed(sender: AnyObject) {
+        x += 1
+        label.text="\(x)"
+        
+    }
 
+    @IBOutlet weak var label: UILabel!
 }
 
