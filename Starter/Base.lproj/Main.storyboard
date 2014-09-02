@@ -140,18 +140,32 @@
                                     <action selector="plainPressed:" destination="x1D-zz-w5l" eventType="touchUpInside" id="wKD-VS-0kV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5f-aC-3Hf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="GetURL">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="208" y="113" width="55" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="getURL:" destination="x1D-zz-w5l" eventType="touchUpInside" id="UNq-cf-VWF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="bdg-C2-5n8"/>
                                 <exclude reference="ZPe-pY-TjJ"/>
+                                <exclude reference="m5f-aC-3Hf"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="bdg-C2-5n8"/>
                                 <include reference="ZPe-pY-TjJ"/>
+                                <include reference="m5f-aC-3Hf"/>
                             </mask>
                         </variation>
                     </view>
